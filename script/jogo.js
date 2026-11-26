@@ -1,5 +1,5 @@
+alert("funciona seu porra)
 let botao = document.getElementById("enviar");
-
 botao.addEventListener("click", function() {
     let numero = document.getElementById("numero").value;
     if (numero == 20) {
