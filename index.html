@@ -1,44 +1,71 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head> 
+  <head>
     <meta charset="UTF-8">
-    <meta name="author" content="erik e gabriel">
+    <meta name="author" content="Erik e Gabriel">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo do Adivinha</title>
     <link rel="stylesheet" href="style/menu.css">
   </head>
   <body>
     <header>
-      <script>
-        alert("a equipe do github decidiu que o Gabriel e gay")
-      </script>
-      <h1 class="titulo">jogo do adivinha</h1>
+      <h1 class="titulo">Jogo do Adivinha</h1>
       <img src="../imagens/logo.png" alt="Logo do site" class="logo">
     </header>
+
     <main>
-      <h2 class="titulo2">adivinhe o personagem</h2>
-      <p></p>
-       <ul>
+      <h2 class="titulo2">Adivinhe o personagem</h2>
+
+      <ul class="menu-botoes">
+        <li>
           <button class="jogarbotao" onclick="window.location.href='modulos/jogar.html'">
-             ▶JOGAR
+            ▶ JOGAR
           </button>
-       </ul>
-       <ul>
+        </li>
+        <li>
           <button class="configbotao" onclick="window.location.href='modulos/config.html'">
-             ⚙CONFIG
+            ⚙ CONFIG
           </button>
-       </ul>
-       <ul>
+        </li>
+        <li>
           <button class="creditosbotao" onclick="window.location.href='modulos/creditos.html'">
-             ★CREDITOS
+            ★ CRÉDITOS
           </button>
-       </ul>
+        </li>
+      </ul>
     </main>
+
     <footer>
-      <p class="creditosmenu"> made in brasil @2026</p>
+      <p class="creditosmenu">Made in Brasil @2026</p>
     </footer>
+
+    <audio id="musica-fundo" src="../audio/doki.mp3" loop preload="auto"></audio>
+
+    <button id="botao-musica" class="botao-musica" onclick="toggleMusica()" aria-label="Ligar ou desligar música">
+      🔇
+    </button>
+
+    <script>
+      const musica = document.getElementById('musica-fundo');
+      const botaoMusica = document.getElementById('botao-musica');
+
+      function toggleMusica() {
+        if (musica.paused) {
+          musica.play();
+          botaoMusica.textContent = '🔊';
+        } else {
+          musica.pause();
+          botaoMusica.textContent = '🔇';
+        }
+      }
+
+      document.addEventListener('click', function iniciarMusica() {
+        musica.play().then(() => {
+          botaoMusica.textContent = '🔊';
+        }).catch(() => {});
+        document.removeEventListener('click', iniciarMusica);
+      }, { once: true });
+    </script>
   </body>
 </html>
-  
-  
-
   
