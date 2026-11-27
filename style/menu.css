@@ -1,7 +1,90 @@
 body {
     background-image: url("../imagens/zero.png");
     background-size: cover;
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+.titulo2 {
+    position: relative;
+    left: 1010px;
+    top: 430px;
+    color: rgb(255, 255, 255);
+    
+}
+
+.jogarbotao{
+    position: relative;
+    left: 930px;
+    top: 430px;
+    width: 330px;
+    height: 60px;
+    border-radius: 15px;
+    border: 3px solid rgb(0, 0, 0);
+    font-size: 22px;
+    color: white;
+    background-color: #690f5a;
+
+    cursor: pointer;
+    
+}
+
+.creditosbotao{
+    position: relative;
+    left: 930px;
+    top: 430px;
+    width: 330px;
+    height: 60px;
+    border-radius: 15px;
+    border: 3px solid rgb(0, 0, 0);
+    font-size: 22px;
+    color: white;
+    background-color: #690f5a;
+
+    cursor: pointer;
+    
+}
+
+.configbotao{
+    position: relative;
+    left: 930px;
+    top: 430px;
+    width: 330px;
+    height: 60px;
+    border-radius: 15px;
+    border: 3px solid rgb(0, 0, 0);
+    font-size: 22px;
+    color: white;
+    background-color: #690f5a;
+
+    cursor: pointer;
+    
+}
+
+.creditosmenu{
+    position: relative;
+    left: 1500px;
+    top: 600px;
+    width: 330px;
+    height: 60px;
+    font-size: 22px;
+    color: white;
+
+    cursor: pointer;
+    
+}
+
+.logo {
+    position: relative;
+    left: 990px;
+    top: 440px;
+    color: rgb(255, 255, 255);
+    width: 300px;
+    height: auto;
 }
